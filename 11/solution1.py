@@ -5,9 +5,9 @@ stones = {}
 for i in input:
     stones[i] = 1
 
-for blink in range(74, -1, -1):
+for blink in range(24, -1, -1):
     next = {}
-    for  stone, count in stones.items():
+    for stone, count in stones.items():
         nbr = int(stone)
         left, right = None, None
 
@@ -20,7 +20,7 @@ for blink in range(74, -1, -1):
         else:
             newNbr = nbr * 2024
             left = str(newNbr)
-    
+        
         if left in next:
             next[left] += count
         else: 
@@ -31,7 +31,6 @@ for blink in range(74, -1, -1):
             else:
                 next[right] = count
     stones = next
-
-print("total", sum(stones.values()))
         
-# solution 242090118578155
+print("total", sum(stones.values()))
+# solution 203953
