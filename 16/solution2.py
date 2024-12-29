@@ -21,6 +21,9 @@ def getInputs(file):
         rows += 1
     return (rows, cols, startPosition, endPosition, allowedPositions)
 
+# Use BFS to find shortest paths. 
+# To find multiple shortest paths the important things must be what to store in visited list. 
+# In this case not just the position but also the direction when being at that position.
 def BFS(startPosition, endPosition, allowedPositions):
     bestTiles = set()
     queue = [(0, startPosition, EAST, set([startPosition]))]
