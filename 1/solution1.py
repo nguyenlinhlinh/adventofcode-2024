@@ -16,3 +16,5 @@ for i in range(len(list1)):
     total += abs(list1[i] - list2[i])
 
 print("total distance", total)
+
+# Solution 1258579
