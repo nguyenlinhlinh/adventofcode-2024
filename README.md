@@ -28,3 +28,13 @@ Comming soon.
 **Part2 problem:** it's an X-MAS puzzle in which you're supposed to find two MAS in the shape of an X.
 
 **Part 1 solution:** Scan through the matrix with a window of 3 * 3 matrix (sliding window) and extract word from left to right diagonal and right to left diagonal. 
+
+## Day 5
+
+**Part 1 problem:** The first section specifies page ordering rules. For example 47|53, means that if an update includes both page number 47 and page number 53, then page number 47 must be printed at some point before page number 53. (47 doesn't necessarily need to be immediately before 53; other pages are allowed to be between them.). The second section specifies the page numbers of each update. Because most safety manuals are different, the pages needed in the updates are different too. The first update, 75,47,61,53,29, means that the update consists of page numbers 75, 47, 61, 53, and 29. Find which updates are already in the right order. 
+
+**Part 1 solution:** Go through the order and for each order create a set. Go through each page number in the order. Get the page ordering rules of the page number. If the number in the ordering rules exist in the set already it means the order is incorrect. If the number doesn't cause incorrect order add the number to the set procceed with the next number in the order.
+
+***Part 2 problem:** For each of the incorrectly-ordered updates, use the page ordering rules to put the page numbers in the right order.
+
+**Part 2 solution:** Go through each incorrect order and sort the page. For each order store the new order in an array called `newOrder`. Go through each page number in the order. Add the page number to `newOrder`. Run a while loop as long as the order in `newOrder` is incorrect. get page order rules for the last page number in `newOrder`. Iterate through `newOrder` from these end of the list, if the page number in `newOrder` is in correct pop it and append the page last in the array.
