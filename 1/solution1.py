@@ -1,4 +1,4 @@
-f= open("1/input-simple.txt", "r")
+f= open("1/input.txt", "r")
 
 list1 = []
 list2 = []

@@ -26,3 +26,5 @@ for i in range(len(list1)):
     total += a * c
 
 print("total similarity score", total)
+
+# solution 23981443
