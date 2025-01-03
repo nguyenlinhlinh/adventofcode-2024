@@ -38,3 +38,15 @@ Comming soon.
 ***Part 2 problem:** For each of the incorrectly-ordered updates, use the page ordering rules to put the page numbers in the right order.
 
 **Part 2 solution:** Go through each incorrect order and sort the page. For each order store the new order in an array called `newOrder`. Go through each page number in the order. Add the page number to `newOrder`. Run a while loop as long as the order in `newOrder` is incorrect. get page order rules for the last page number in `newOrder`. Iterate through `newOrder` from these end of the list, if the page number in `newOrder` is in correct pop it and append the page last in the array.
+
+## Day 6
+Comming soon
+
+## Day 7
+**Part 1 problem:** Each line represent a single equation. Test value appears before the colon on each line; determine wether the remaining numbers can be combined with operators to produce the test value.
+
+**Part 1 solution:** For each equation check if the equation is possible by starting with an array (called queue) that has the first number after colon. Iterate until the last number after colon. For each iteration go through all values in queue and perform addition and multiply with the number in current iteration. If the result is <= test value add to them to the next array. After performing addition and multiplication assign queye = next array. Keep doing this until the last number in the equation.
+
+**Part 2 problem:** The concatenation operator (||) combines the digits from its left and right inputs into a single number. For example, 12 || 345 would become 12345. All operators are still evaluated left-to-right. Now there are three operators available *, + and ||.
+
+**Part 2 solution:** Do the same as part 1 just introduce the third operator. The solution becomes a bit slower.
