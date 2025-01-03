@@ -24,7 +24,8 @@ def hasSamePositions(startPositions, currenPositions):
         if currenPositions[i] != startPositions[i]:
             return False
     return True
-        
+
+# Initial solution but very slow. Calculate average distance of a point to all other points   
 def findAvgDistance(positions):
     totalAvgDis = 0
     for i in range(len(positions)):
@@ -38,6 +39,16 @@ def findAvgDistance(positions):
             totalDis += distance
         totalAvgDis += (totalDis / len(positions))
     return totalAvgDis/len(positions)
+
+# Talked to a colleague which recommend this one to make it quicker. Calculate distance of all point to middle point
+def findAvgDistanceToMiddlePoint(positions, middlePoint):
+    totalDis = 0
+    (mX, mY) = middlePoint
+    for i in range(len(positions)):
+        (x, y) = positions[i]
+        distance = abs(x - mX) + abs(y - mY)
+        totalDis += distance
+    return totalDis/len(positions)
 
 def simulateNextSecond(currentPosisitions, velocity, wide, tall):
     nextPosistions = []
@@ -55,7 +66,7 @@ def findXmasTree(positions, velocity, wide, tall):
     minAvgDis = (sys.maxsize, seconds, startPositions)
     while True:
         currentPositions = simulateNextSecond(currentPositions, velocity, wide, tall)
-        avgDis = findAvgDistance(currentPositions)
+        avgDis = findAvgDistanceToMiddlePoint(currentPositions, (wide // 2, tall // 2))
         if avgDis < minAvgDis[0]:
             minAvgDis = (avgDis, seconds, currentPositions)
         if hasSamePositions(startPositions, currentPositions):

@@ -75,3 +75,13 @@ Comming soon
 **Part 2 problem:** The position of every prize is actually 10000000000000 higher on both the X and Y axis
 
 **Part 2 solution:** Same as part 1 just change the prize coordinate. **NOTE:** This is a performance issue if it is solved by something else rather than system equation.
+
+# Day 14
+
+**Part 1 problem:** Simulate movement of robots in a matrix for 100 seconds.
+
+**Part 1 solution:** Write code to simulate it. Simple as it is.
+
+**Part 2 problem:** Find the second when robots form a Christmas tree.
+
+**Part 2 solution:** Initial solution was to calculate the average distance of each robot to other robots and pick the second with minimum averge distance. It worked but very slow. After talking to a colleague which recommend calculation average distance of each robot to middle point in the matrix and pick the second with minimum average distance. The second solution is faster.
