@@ -27,7 +27,7 @@ def calculateSafetyFactor():
         elif x > xMid and y > yMid:
             fourth += 1
     safetyFactor = first * second * third * fourth
-    print("safetyFactor", safetyFactor)
+    return safetyFactor
 
 for second in range(100):
     for robot in robots:
@@ -35,11 +35,7 @@ for second in range(100):
         (vX, vY) = robot[1]
         nextPos = ((x + vX) % wide, (y + vY)%tall)
         robot[0] = nextPos
-    calculateSafetyFactor()
 
-
-
-
-
+safetyFactor = calculateSafetyFactor()
 print("safetyFactor", safetyFactor)
 # solution 230900224
