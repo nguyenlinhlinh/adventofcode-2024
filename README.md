@@ -50,3 +50,28 @@ Comming soon
 **Part 2 problem:** The concatenation operator (||) combines the digits from its left and right inputs into a single number. For example, 12 || 345 would become 12345. All operators are still evaluated left-to-right. Now there are three operators available *, + and ||.
 
 **Part 2 solution:** Do the same as part 1 just introduce the third operator. The solution becomes a bit slower.
+
+## Day 8
+Comming soon
+
+## Day 9
+Comming soon
+
+## Day 10
+Comming soon
+
+## Day 11
+Comming soon
+
+## Day 12
+Comming soon
+
+## Day 13
+
+**Part 1 problem:** The claw machines has two button A and B. It costs 3 tokens to push button A and 1 token to push button B. Each machine's buttons are configured to move the claw a specific amount to the right (along X axis) and a specific amount forward (along Y axes) each time that button is pressed. Find the smallest number of tokens to spend to win as many prize as possible.
+
+**Part 1 solution:** Set up a system equation and solve it. 
+
+**Part 2 problem:** The position of every prize is actually 10000000000000 higher on both the X and Y axis
+
+**Part 2 solution:** Same as part 1 just change the prize coordinate. **NOTE:** This is a performance issue if it is solved by something else rather than system equation.
