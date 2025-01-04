@@ -85,3 +85,40 @@ Comming soon
 **Part 2 problem:** Find the second when robots form a Christmas tree.
 
 **Part 2 solution:** Initial solution was to calculate the average distance of each robot to other robots and pick the second with minimum averge distance. It worked but very slow. After talking to a colleague which recommend calculation average distance of each robot to middle point in the matrix and pick the second with minimum average distance. The second solution is faster.
+
+## Day 15
+Comming soon
+
+## Day 16
+Comming soon
+
+## Day 17
+Comming soon
+
+## Day 18
+Comming soon
+
+## Day 19
+Comming soon
+
+## Day 20
+Comming soon
+
+## Day 21
+Comming soon
+
+## Day 22
+Comming soon
+
+## Day 23
+Comming soon
+
+## Day 24
+Comming soon
+
+## Day 25
+**Part 1 problem:** Give a list of locks and keys, find unique pairs of lock and key that fit.
+
+**Part 1 solution:** Iterate through locks and for each lock check each key which to see if it fits. If they fit store the pair in a set.
+
+There was no part 2
