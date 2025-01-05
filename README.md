@@ -40,7 +40,12 @@ Comming soon.
 **Part 2 solution:** Go through each incorrect order and sort the page. For each order store the new order in an array called `newOrder`. Go through each page number in the order. Add the page number to `newOrder`. Run a while loop as long as the order in `newOrder` is incorrect. get page order rules for the last page number in `newOrder`. Iterate through `newOrder` from these end of the list, if the page number in `newOrder` is in correct pop it and append the page last in the array.
 
 ## Day 6
-Comming soon
+**Part 1 problem:** Given a map where obstructions is marked with `#`. The guard patrol protocol is: If there is something directly in front of you, turn right 90 degrees. Otherwise, take a step forward". Find distinct position the guard will visit befor leaving the mapped area.
+
+**Part 1 solution:** Implement as stated in patrol protocol. Have a set called positions to store unique positions. Turn right means for current dir is (x, y) turn right mean the next dir is (y, -x).
+
+**Part 2 problem:** Find how many different positions could you add a obstruction to get the guard stuck in a loop (creating a circle).
+**Part 2 solution:** From the distinct positions collected in part 1 test adding obstruction for each positions and detect if it creates a loop in the guard's path. A loop is created when the guard visit the same position with the same direction while being in that position. To do that have a visited set storing position and direction. This solution is slow. How could I improve it?
 
 ## Day 7
 **Part 1 problem:** Each line represent a single equation. Test value appears before the colon on each line; determine wether the remaining numbers can be combined with operators to produce the test value.
