@@ -119,7 +119,11 @@ Comming soon
 Comming soon
 
 ## Day 24
-Comming soon
+**Part 1 problem:** Given a list of binary operations, operations could be in wrong order which means the operands might haven't get the input/value yet. Calculate the decimal value of z.
+**Part 1 solution:** Implement the binary operations as defined. When an operation haven't get the input/value yet move the operation to last of the list.
+
+**Part 2 problem:** The operations/system is trying to perform addition but some outputs have been swapped and therefore the system produces wrong result. Figure out which outputs are swapped.
+**Part 2 solution:** Done the operations manually and figured out that for  each pair of x and y the operations related to them form a [Ripple Adder](https://users.encs.concordia.ca/~asim/coen312/Lectures/RCA.pdf). So the automatic solution is first gather operations related to specific x,y pair. Check if they produce correct result using some test values. If not try to swap the outputs in that set of operantions until it give correct result.
 
 ## Day 25
 **Part 1 problem:** Give a list of locks and keys, find unique pairs of lock and key that fit.
