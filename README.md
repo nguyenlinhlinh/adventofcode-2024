@@ -93,7 +93,16 @@ Comming soon
 **Part 2 solution:** Initial solution was to calculate the average distance of each robot to other robots and pick the second with minimum averge distance. It worked but very slow. After talking to a colleague which recommend calculation average distance of each robot to middle point in the matrix and pick the second with minimum average distance. The second solution is faster.
 
 ## Day 15
-Comming soon
+**Part 1 problem:** Give a map with position of walls and boxes. A robot inside the map try to move. if there is any boxes in the way it pushes the box. If this action would cause the robot or a box to move into the wall, nothing moves. Simulate this and find the sum of all boxes' GPS coordinates.
+
+**Part 1 solution:** Implement the movement as describe. Moving the boxes by first find and empty slot in the direction the robot move and then move the boxes one by one.
+
+**Part 2 problem:** Everything is twice as wide. Simulate this and find the sum of all boxes' GPS coordinates.
+
+**Part 2 solution:** Since one box now has two coordinates one for left half one for right half it is more difficult. Simulate the movement of the boxes by:
+- Find all the boxes that is effected by the movement of the robot using BFS. 
+- Check if these box can be pushed. They can not by pushed if they hit a wall or another box when being moved. 
+- If they can be pushed simulated the pushing by finding the new positions for each of boxes (left half and right half), remove the old position that now longer has boxes in obsticals and boxFinder. Lastly, update obsticals and boxFinder with new positions.
 
 ## Day 16
 Comming soon
