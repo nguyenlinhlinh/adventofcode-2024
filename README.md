@@ -116,7 +116,11 @@ Comming soon
 Comming soon
 
 ## Day 23
-Comming soon
+**Part 1 problem:** Given a list of every connections between two computers. find a set of three computers where each computer in the set is connected to the other two computer.
+**Part 1 solution:** Store connections in a dictionary where key is computer name and value is array of computers it is connected to. Iterate through the dictionary. For each computers (key) check the combinations of two computers in the array (value) if are connected to each other.
+
+**Part 2 problem:** Find the largest set of computers that are all connected to each other.
+**Part 2 solution:** From the three connected computers in part 1 use DFS to find connected components of it. For each connected component check that the nodes in it are connected to each other.
 
 ## Day 24
 **Part 1 problem:** Given a list of binary operations, operations could be in wrong order which means the operands might haven't get the input/value yet. Calculate the decimal value of z.
