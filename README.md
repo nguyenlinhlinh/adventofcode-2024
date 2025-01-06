@@ -102,7 +102,13 @@ Comming soon
 Comming soon
 
 ## Day 18
-Comming soon
+**Part 1 problem:** Given a map, find the shortest path to the exit.
+
+**Part 1 solution:** Find shortest path using BFS
+
+**Part 2 problem:** Find the first byte that will cut off the path to the exit.
+
+**Part 2 solution:** Iterate from the end of the byte positions list and check if there is a path to exit. Once the path is found the the first byte that block the path is found.
 
 ## Day 19
 Comming soon
