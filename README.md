@@ -45,6 +45,7 @@ Comming soon.
 **Part 1 solution:** Implement as stated in patrol protocol. Have a set called positions to store unique positions. Turn right means for current dir is (x, y) turn right mean the next dir is (y, -x).
 
 **Part 2 problem:** Find how many different positions could you add a obstruction to get the guard stuck in a loop (creating a circle).
+
 **Part 2 solution:** From the distinct positions collected in part 1 test adding obstruction for each positions and detect if it creates a loop in the guard's path. A loop is created when the guard visit the same position with the same direction while being in that position. To do that have a visited set storing position and direction. This solution is slow. How could I improve it?
 
 ## Day 7
@@ -113,20 +114,32 @@ Comming soon
 Comming soon
 
 ## Day 22
-Comming soon
+**Part 1 problem:** Generate numbers from secret number buy performing are series of operations. Find the sum of the 2000th secret number.
+
+**Part 1 solutions:** Implemented by following exactly what was stated in the problem.
+
+**Part 2 problem:** Find the four consecutive changes in price that give the most bananas.
+
+**Part 2 solution:** Iterate through the price change sequence 4 changes at time to find which one gives the most bananas.
+
 
 ## Day 23
 **Part 1 problem:** Given a list of every connections between two computers. find a set of three computers where each computer in the set is connected to the other two computer.
+
 **Part 1 solution:** Store connections in a dictionary where key is computer name and value is array of computers it is connected to. Iterate through the dictionary. For each computers (key) check the combinations of two computers in the array (value) if are connected to each other.
 
 **Part 2 problem:** Find the largest set of computers that are all connected to each other.
+
 **Part 2 solution:** From the three connected computers in part 1 use DFS to find connected components of it. For each connected component check that the nodes in it are connected to each other.
+
 
 ## Day 24
 **Part 1 problem:** Given a list of binary operations, operations could be in wrong order which means the operands might haven't get the input/value yet. Calculate the decimal value of z.
+
 **Part 1 solution:** Implement the binary operations as defined. When an operation haven't get the input/value yet move the operation to last of the list.
 
 **Part 2 problem:** The operations/system is trying to perform addition but some outputs have been swapped and therefore the system produces wrong result. Figure out which outputs are swapped.
+
 **Part 2 solution:** Done the operations manually and figured out that for  each pair of x and y the operations related to them form a [Ripple Adder](https://users.encs.concordia.ca/~asim/coen312/Lectures/RCA.pdf). So the automatic solution is first gather operations related to specific x,y pair. Check if they produce correct result using some test values. If not try to swap the outputs in that set of operantions until it give correct result.
 
 ## Day 25
