@@ -123,8 +123,21 @@ Comming soon
 Comming soon
 
 ## Day 20
-Comming soon
+**Part 1 problem:** Given a map of racetrack mark with start and end position. One could cheat the race by passing through walls up to 2 picosend. At the end of the cheat the program must be back on to normal track again.
 
+**Part 1 solution:** Start by find shortest distance from S to all other possitions that are not a wall using Djktra algorithm. Finding the number of cheats that save time by iterate through the list of walls and for each wall get all the possible start and end cheat position. The time using the cheat is distance from start position to cheat start position  + 2 + distance from end position to cheat end position.
+
+**Part 2 problem:** Similar to part 1 but it is allowed to cheat up to 20 seconds. 
+
+**Part 2 solution:** Doing the same as part 1 but iterate through combinations op two positions (one is cheat start and one is cheat end) that is not walls. This has performance issue. Very slow took 13s to finish. Optimse by for each position only consider the positions that has manhattan distance at most 20. This is done by iterate through the points around start positions that could form and Rhombus. Still it is slow but now the time is reduced to 6.28s. Could this be better or it is just Python that is slower than other languages? 
+```py
+rows = 100
+cols = 100
+start = (r, c)
+maxCheats = 20
+for row in range(max(0, r - (maxCheats + 1)), min(rows, r + (maxCheats +1))):
+    for c in range(max(0, (c - (maxCheats)) + abs(row - r)), min(rows, (c + (maxCheats + 1)) - abs(row - r))):
+```
 ## Day 21
 Comming soon
 
