@@ -70,7 +70,12 @@ Comming soon
 Comming soon
 
 ## Day 12
-Comming soon
+**Part 1 problem:** Given a map with different kind of type of plant. Find the area and perimeter of each plant region.
+**Part 1 solution:** Finding the region using BFS.
+
+**Part 2 problem:** calculate the sides of each region. A side longer than 1 plot counted as 1 side.
+
+**Part 2 solution:** Calculate the number of sides for each region by finding the perimeter positions for each long vertical and horizontal edge. For vertical edges find all perimeters on the left and on the right of the edge. For horizontal find all perimerter positions on the row before and after the edges. After that using collected perimeter positions for construct array of long sides. For each sides deduct the side length - 1 from the total perimeters calculated from part 1. 
 
 ## Day 13
 
